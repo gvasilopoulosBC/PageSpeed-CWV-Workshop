@@ -1,0 +1,144 @@
+@import url(background.css);
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/roboto-regular.woff) format("woff");
+}
+
+body {
+  font-family: "Roboto";
+  padding: 0 20px;
+  margin: 0;
+}
+
+#ad1 {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+article {
+  padding: 18px;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+article img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+article h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+article button {
+  background: none rgb(0, 59, 78);
+  margin: 0px;
+  outline: none;
+  outline-offset: 0px;
+  cursor: pointer;
+  appearance: none;
+  font-size: 16px;
+  line-height: 1.5em;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: none;
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.14s ease 0s, color 0.14s ease 0s;
+  padding: 8px 12px;
+  border: 1px solid rgb(0, 59, 78);
+  color: rgba(255, 255, 255, 0.99);
+  margin-top: 10px;
+}
+
+main {
+  max-width: 1270px;
+  margin: 50px auto;
+}
+
+.not-used-css {
+  font-size: 32px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.not-used-css2 {
+  font-size: 32px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 15px;
+  position: relative;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 20px;
+}
+
+.bar {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  transform-origin: 3px center;
+  margin: 3px 0;
+}
+.menu-icon.open .bar {
+  opacity: 0;
+}
+.menu-icon.open .bar:first-child {
+  transform: translateX(2px) rotate(35deg);
+  opacity: 1;
+}
+.menu-icon.open .bar:last-child {
+  transform: translateX(2px) rotate(-35deg);
+  opacity: 1;
+}
+.menu-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  article {
+    width: auto;
+  }
+}
