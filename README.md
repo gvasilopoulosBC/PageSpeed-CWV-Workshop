@@ -28,7 +28,7 @@ Repo for the demo of the workshop.
    pnpm i
    ```
 
-   _yarn or npm istall_
+   _yarn or npm install_
 
 3. Start the dev server for the API at localhost:3030:
 
