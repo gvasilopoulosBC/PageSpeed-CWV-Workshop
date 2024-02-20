@@ -22,18 +22,26 @@ Repo for the demo of the workshop.
 
    ```bash
    cd slow-api
-   pnpm i (yarn or npm istall)
    ```
+
+   ```bash
+   pnpm i
+   ```
+
+   _yarn or npm istall_
 
 3. Start the dev server for the API at localhost:3030:
 
-    ```bash
-    pnpm start
-    ```
+   ```bash
+   pnpm start
+   ```
 
 4. Open a new terminal tab, change directory to `client` folder and start dev server for the client at localhost:8000:
 
-    ```bash
-    cd client
-    php -S localhost:8000
-    ```
+   ```bash
+   cd client
+   ```
+
+   ```bash
+   php -S localhost:8000
+   ```
