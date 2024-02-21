@@ -1,4 +1,4 @@
-async function load() {
+async function loadArticles() {
   const response = await fetch("http://localhost:3030/scripts/data.json");
   const data = await response.json();
   data.forEach((item, i) => {
@@ -14,7 +14,7 @@ async function load() {
   });
 }
 
-window.onload = load;
+window.onload = loadArticles;
 
 function toggleMenu() {
   const menuList = document.getElementById("menuList");
