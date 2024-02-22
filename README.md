@@ -12,13 +12,19 @@ Repo for the demo of the workshop.
 
 ## Getting Started
 
-1. Clone the repository:
+Clone the repository:
 
    ```bash
    git clone https://github.com/gvasilopoulosBC/PageSpeed-CWV-Workshop.git
    ```
 
-2. Install dependencies for the API folder:
+### Run with Docker 
+```bash
+docker-compose up -d --force-recreate
+```
+
+### Manual installation
+1. Install dependencies for the API folder:
 
    ```bash
    cd slow-api
@@ -30,13 +36,13 @@ Repo for the demo of the workshop.
 
    _yarn or npm install_
 
-3. Start the dev server for the API at localhost:3030:
+2. Start the dev server for the API at localhost:3030:
 
    ```bash
    pnpm start
    ```
 
-4. Open a new terminal tab, change directory to `client` folder and start dev server for the client at localhost:8000:
+3. Open a new terminal tab, change directory to `client` folder and start dev server for the client at localhost:8000:
 
    ```bash
    cd client

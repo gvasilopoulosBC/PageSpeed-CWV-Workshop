@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cwv-workshop-demo:
+    build:
+      context: .
+    ports:
+      - "3030:3030"
+      - "8000:8000"
+    volumes:
+        - .:/app
