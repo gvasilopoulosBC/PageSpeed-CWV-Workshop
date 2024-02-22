@@ -1,16 +1,9 @@
 async function longRunningTask() {
-  await new Promise((resolve) => setTimeout(resolve, 200));
   // Simulating a long-running task with a loop
   const startTime = Date.now();
-  while (Date.now() - startTime < 2000) {
+  while (Date.now() - startTime < 2500) {
     // Loop for 2 seconds
   }
   console.log("3rd-service loaded");
 }
-document.addEventListener("DOMContentLoaded", longRunningTask);
-
-function renderDelay() {
-  const startTime = Date.now();
-  while (Date.now() - startTime < 2000) {}
-}
-renderDelay();
+longRunningTask();
