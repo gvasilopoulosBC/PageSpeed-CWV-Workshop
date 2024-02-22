@@ -7,4 +7,10 @@ async function longRunningTask() {
   }
   console.log("3rd-service loaded");
 }
-longRunningTask();
+document.addEventListener("DOMContentLoaded", longRunningTask);
+
+function renderDelay() {
+  const startTime = Date.now();
+  while (Date.now() - startTime < 2000) {}
+}
+renderDelay();
