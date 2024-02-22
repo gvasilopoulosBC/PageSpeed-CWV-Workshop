@@ -23,19 +23,11 @@ WORKDIR /app
 # Copy all files from the current working directory into /app in the Docker image
 COPY . .
 
-# Install dependencies for the API folder
-WORKDIR /app/slow-api
-
-RUN pnpm i
-
-# Go back to the root /app directory
-WORKDIR /app
-
 # Configure Supervisor to run both processes
 RUN echo "[supervisord]\n\
 nodaemon=true\n\n\
 [program:slow-api]\n\
-command=sh -c \"pnpm run start 2>&1 | tee -a /proc/1/fd/1\"\n\
+command=sh -c \"pnpm i && pnpm run start 2>&1 | tee -a /proc/1/fd/1\"\n\
 directory=/app/slow-api\n\
 autorestart=true\n\
 autostart=true\n\
