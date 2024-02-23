@@ -16,7 +16,8 @@ app.use(
 
 app.use((req, res, next) => {
   // Fake pause
-  setTimeout(next, Math.floor(1200));
+  // 1)Reduce TTFB metric with fast backend response.
+  setTimeout(next, Math.floor(120));
 });
 
 app.use(express.static(path.join(__dirname, "public")));

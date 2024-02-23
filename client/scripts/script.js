@@ -1,10 +1,15 @@
 async function loadArticles() {
   const response = await fetch("http://localhost:3030/scripts/data.json");
   const data = await response.json();
+  // 1)webp file formats
+  // 2)loading=lazy to reduce network request
+  // 3)dimensions to improve CLS
   data.forEach((item, i) => {
     const article = `
             <article>
-                <img src="http://localhost:3030/images/${i}-500x300.jpg" alt="${item.title}">
+                <img src="http://localhost:3030/images/${i}-500x300.webp"
+                 width="500" height="300" loading="lazy"
+                  alt="${item.title}"> 
                 <h2>${item.title}</h2>
                 <p>${item.description}</p>
                 <button>More Info</button>
@@ -13,8 +18,8 @@ async function loadArticles() {
     document.querySelector("main").innerHTML += article;
   });
 }
-
-window.onload = loadArticles;
+// 4)helps FCP metric
+window.addEventListener("DOMContentLoaded", loadArticles);
 
 function toggleMenu() {
   const menuList = document.getElementById("menuList");
@@ -22,7 +27,8 @@ function toggleMenu() {
 
   if (menuList.style.display === "none" || menuList.style.display === "") {
     menuicon.classList.add("open");
-    fetchMenuItems();
+    // 5)Not fetch elements on user action helps INP
+    // fetchMenuItems();
     menuList.style.display = "block";
   } else {
     menuicon.classList.remove("open");

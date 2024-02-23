@@ -1,21 +1,11 @@
-@import url(background.css);
-
-@font-face {
-  font-family: "Roboto";
-  src: url(/fonts/roboto-regular.woff) format("woff");
-}
-
-body {
-  font-family: "Roboto";
-  padding: 0 20px;
-  margin: 0;
-}
-
 #ad1 {
   text-align: center;
   margin: auto;
   margin-bottom: 20px;
   max-width: 300px;
+  /* 1)CLS impovement - reserve space for late content */
+  /* min-height: 300px; */
+  aspect-ratio: auto 300 / 300;
 }
 
 article {
