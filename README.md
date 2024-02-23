@@ -2,7 +2,9 @@
 
 ## Overview
 
-Repo for the demo of the workshop.
+Repo for the demo of the workshop. 
+
+Workshop's final code -> https://github.com/gvasilopoulosBC/PageSpeed-CWV-Workshop/tree/workshop-final-code
 
 ## Prerequisites
 
